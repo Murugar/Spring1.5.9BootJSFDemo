@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Login</title>
+</h:head>
+<h:body>
+	<h:form style="background-color: #fffff">
+		<p:panel id="panel" header="Login">
+
+			<h:panelGrid columns="2" cellpadding="5">
+				<h:outputText value="User Name : " />
+				<p:inputText id="username" value="#{bean.username}" required="true"
+					label="username">
+					<f:validateLength minimum="8" />
+				</p:inputText>
+
+				<h:outputText value="password : " />
+				<p:password id="nonFeedback" value="#{bean.password}" />
+				<br></br>
+
+
+				<p:commandButton value="Click" icon="ui-icon-star"
+					actionListener="#{bean.display}"></p:commandButton>
+			</h:panelGrid>
+		</p:panel>
+
+	</h:form>
+</h:body>
+</html>
+
+
